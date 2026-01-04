@@ -1,17 +1,8 @@
-# Session log – 2026-01-04 09:00 (Morning)
+# Session log – 2026-01-04
 
-## Practiced
-- Converted meters to kilometers
-- Days to years/months
+## kEY
+-You can find the simple code to create and make anything..>
 
-## Notes
-- Used gcc in WSL to compile
-- Git commit and push workflow practiced
+# Thank You for the visit...
 
 
-# volume.c
-- programmed to find the value of volume when height width and length are given
-
-# area_surface
-- programmed sucessfully on finding the area, circumference of circle .
-- Also programmed sucessfully on finding the area and volume of sphere.
