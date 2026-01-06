@@ -1,4 +1,4 @@
-// It is the calculator where you can find addition , subtraction, multiplication, division, remainder between two inputs
+// It is the calculator where you can find addition , subtraction, multiplication, division, remainder, trigonometic  between two inputs
 #include<stdio.h>
 #include<math.h>
 #include<string.h>
