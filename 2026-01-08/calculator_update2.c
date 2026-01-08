@@ -36,7 +36,7 @@ void prime_no_generation();
 
 
 int main(){
-    printf( "\n\nWelcome to the world of small calculator..\nHere you can find (addition, subtraction, multiplication, division, remainder, trigonomerty)");
+    printf( "\n\nWelcome to the world of small calculator..(Designed By Labi...)\nHere you can find (addition, subtraction, multiplication, division, remainder, trigonomerty)");
    
     while (1){
     char what_to[20];
