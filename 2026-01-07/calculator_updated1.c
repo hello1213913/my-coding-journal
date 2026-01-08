@@ -14,17 +14,19 @@ void multiply();
 void division();
 void remain();
 void trigonometry();
+void tri_formulas();
 
 
 int main(){
+    printf( "\n\nWelcome to the world of small calculator..\nHere you can find (addition, subtraction, multiplication, division, remainder, trigonomerty)");
+   
     while (1){
     char what_to[20];
-    printf( "\n\nWelcome to the world of small calculator..\nHere you can find (addition, subtraction, multiplication, division, remainder, trigonomerty)");
     
     printf("\nEnter the two value ");
     scanf("%f %f", &value1, &value2);
     
-    printf("\nType\n\t(add) for addition\n\t(subtract) for subtraction\n\t(multiply) for multiplicatio\n\t(divide) for division\n\t(remain) for remainder\n\t(tri) for trigonometry\n\t to find it...");
+    printf("\nType\n\t(add) for addition\n\t(subtract) for subtraction\n\t(multiply) for multiplicatio\n\t(divide) for division\n\t(remain) for remainder\n\t(tri) for trigonometry\n\t(formula) for basic trigonometric formula\n\t to find it...");
     scanf("%s", what_to);
 
     
@@ -40,7 +42,10 @@ int main(){
         remain();
     }else if((strcmp(what_to, "tri"))==0){
         trigonometry();
-    }else{
+    }else if((strcmp(what_to, "formula"))==0){
+        tri_formulas();
+    }
+    else{
         printf("\n Invalid word...\tTry again..");
     }
 
@@ -57,7 +62,7 @@ void addition(){
 void subtraction(){
     int first_or_second;
     printf("\nWhat do you want to find (value1 - value2) or (value2- value1)");
-    printf("\nEnter \n 1 : (value1 - value2(%.3f-%.3f))\n 2 : (value2 - value1(%.3f %.3f))", value1,value2, value2, value1);
+    printf("\nEnter \n 1 : (value1 - value2(%.3f - %.3f))\n 2 : (value2 - value1(%.3f - %.3f))", value1,value2, value2, value1);
     scanf("%d", &first_or_second);
 
 
@@ -103,7 +108,7 @@ void remain(){
         case 1:
             
             if(v2==0){
-                printf("\nSyntax error");
+                printf("\nNot possible to divide by 0");
             }else{printf("\nThe remainder when %d is divided by %d is : %d", v1, v2, v1 % v2);
             }
             break;
@@ -121,7 +126,7 @@ void remain(){
 
 void trigonometry(){
     int tri_what;
-    printf("\nEnter \n1 : sin\n 2:cos \n3 : tan");
+    printf("\nEnter \n1 : sin\n2:cos \n3 : tan\n4 : cosec\n5 : sec\n6 : cot\n");
     scanf("%d", &tri_what);
 
     switch(tri_what){
@@ -134,8 +139,21 @@ void trigonometry(){
         case 3:
             printf("\nThe tan value of %.3f is: %f\nand %.3f is: %f ", value1, tan(value1), value2, tan(value2));
             break;
+        case 4:
+            printf("\nThe cosec value of %.3f is: %f\nand %.3f is: %f ", value1, tan(value1), value2, 1/(sin(value2)));
+            break;
+        case 5:
+            printf("\nThe sec value of %.3f is: %f\nand %.3f is: %f ", value1, tan(value1), value2, 1/(cos(value2)));
+            break;
+        case 6:
+            printf("\nThe cot value of %.3f is: %f\nand %.3f is: %f ", value1, tan(value1), value2, 1/(tan(value2)));
+            break;
         default:
             printf("\nSyntax error...");
     }
 printf("\nOutput Values are in radian");
+}
+
+void tri_formulas(){
+    printf("The simple formulas book is \nsin^2 x + cos^2 x = 1\ncosec^2 x - cot^2 x = 1\n sec^2 x - tan^2 x = 1\n");
 }
