@@ -7,14 +7,31 @@
 
 float value1, value2; //declaration of variables. 
 
-void addition();
+//function of addition
+void addition(); 
+
+//function of subtraction
 void subtraction();
+
+//function of multiply
 void multiply();
+
+//function of dividion
 void division();
+
+//function of remain
 void remain();
+
+//function of trigonemetry
 void trigonometry();
+
+//function of formulas
 void tri_formulas();
+
+// function that check whether the number is prime number or not
 void prime_no_checker();
+
+// function that generates the prime number between two numbers.
 void prime_no_generation();
 
 
@@ -23,14 +40,16 @@ int main(){
    
     while (1){
     char what_to[20];
-    
+
+    // value needed for calculation
     printf("\nEnter the two value ");
     scanf("%f %f", &value1, &value2);
-    
+
+    //guide for the user what to do..
     printf("\nType\n\t(add) for addition\n\t(subtract) for subtraction\n\t(multiply) for multiplicatio\n\t(divide) for division\n\t(remain) for remainder\n\t(tri) for trigonometry\n\t(formula) for basic trigonometric formula\n\t(check_prime) for checking prime number\n\t(prime_generation) for generation prime number betwen those number\n\t to find it...");
     scanf("%s", what_to);
 
-    
+    //statement that runs what user whats to do 
     if((strcmp(what_to , "add"))==0){
         addition();
     }else if(strcmp(what_to, "subtract")==0){
@@ -168,7 +187,7 @@ void prime_no_checker(){
     printf("Enter the number to check the no is prime or not \n");
     scanf("%d", &prime_or_not);
 
-    flag == 1;
+    flag == 1; //to check the number is even or odd after the loop
 
     for(int i = 2; i <= (int)sqrt(prime_or_not); i++){
         if(prime_or_not%i == 0){
