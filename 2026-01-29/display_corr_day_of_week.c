@@ -5,7 +5,7 @@ int main(){
     printf("Enter the number from 1 to 7 to know which number denotes what\n");
     scanf("%d", &num);
 
-    if(num>1 && num <=7){
+    if(num>=1 && num <=7){
         switch(num){
             case 1: printf("\nsunday");
                 break;
