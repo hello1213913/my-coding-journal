@@ -20,6 +20,7 @@ int main(){
 
     }
     printf("\nThe sum is %ld", calling);
+    printf("\nThank YOu\nBy labi..");
 }
 
 long int count(long int n){
