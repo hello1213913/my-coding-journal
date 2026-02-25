@@ -38,7 +38,7 @@ void sort_age(emp p[], int n){
     int i,j;
     for(i=0; i<n-1; i++){
         for(j=0; j<n-1-i; j++){
-            if(p[j].age > p[j+1].age){
+            if(p[j].age < p[j+1].age){
                 temp = p[j];
                 p[j] = p[j+1];
                 p[j+1] = temp;
